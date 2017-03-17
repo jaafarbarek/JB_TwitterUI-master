@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UAC-zy-Gjj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Hf3-Xw-wx4">
+            <objects>
+                <viewController id="oMC-sT-IFX" customClass="ViewController" customModule="TB_TwitterHeader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RHz-fe-P7A"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Rk-JX-Bzd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aiL-GS-Axu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-8Z-cSb" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="107"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jane Stormtrooper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVV-DQ-JEu">
+                                        <rect key="frame" x="226" y="104" width="148" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47450980390000003" green="0.078431372550000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="MVV-DQ-JEu" secondAttribute="centerX" id="8dc-gt-fxT"/>
+                                    <constraint firstItem="MVV-DQ-JEu" firstAttribute="top" secondItem="Hce-8Z-cSb" secondAttribute="top" constant="104" id="KZ1-BS-ErM"/>
+                                    <constraint firstAttribute="height" constant="107" id="R8X-k1-mIQ"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-QP-lOq" userLabel="Scrollview">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="6BG-Eo-727" userLabel="AvatarImage" customClass="AvatarImageView" customModule="TB_TwitterHeader" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="79" width="69" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jane Stormtrooper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c5-u4-cui">
+                                        <rect key="frame" x="8" y="156" width="224" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="0.16078431369999999" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOc-3J-Jf8" userLabel="FollowButton" customClass="TWTButton" customModule="TB_TwitterHeader" customModuleProvider="target">
+                                        <rect key="frame" x="478" y="118" width="112" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="njT-bJ-x0T"/>
+                                            <constraint firstAttribute="width" constant="112" id="xxI-Wi-hz1"/>
+                                        </constraints>
+                                        <state key="normal" title="Follow">
+                                            <color key="titleColor" red="0.33333333329999998" green="0.67450980390000004" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shamelessActionThatBringsYouToMyTwitterProfile" destination="oMC-sT-IFX" eventType="touchUpInside" id="hVI-GX-8wC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@bitwaker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tu-gU-gE3" userLabel="TwitterUsername">
+                                        <rect key="frame" x="8" y="177" width="128" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.41960784309999999" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="love" translatesAutoresizingMaskIntoConstraints="NO" id="Jyp-aV-hP1" userLabel="Love">
+                                        <rect key="frame" x="281" y="404" width="32" height="32"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URM-cS-xy1" userLabel="Spacer">
+                                        <rect key="frame" x="0.0" y="477" width="600" height="390"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="390" id="fhL-Si-oya"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Jyp-aV-hP1" firstAttribute="top" secondItem="KFl-QP-lOq" secondAttribute="top" constant="404" id="6wV-Ti-YgH"/>
+                                    <constraint firstItem="URM-cS-xy1" firstAttribute="top" secondItem="KFl-QP-lOq" secondAttribute="top" constant="477" id="9Yi-Yo-AmF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZOc-3J-Jf8" secondAttribute="trailing" constant="10" id="XBl-ij-XIP"/>
+                                    <constraint firstAttribute="trailing" secondItem="URM-cS-xy1" secondAttribute="trailing" id="Y8A-y0-otH"/>
+                                    <constraint firstAttribute="centerX" secondItem="Jyp-aV-hP1" secondAttribute="centerX" constant="3" id="bHP-pO-4Ep"/>
+                                    <constraint firstAttribute="bottom" secondItem="URM-cS-xy1" secondAttribute="bottom" constant="37" id="jcM-Io-oF9"/>
+                                    <constraint firstItem="URM-cS-xy1" firstAttribute="leading" secondItem="KFl-QP-lOq" secondAttribute="leading" id="rDS-jp-UEs"/>
+                                    <constraint firstItem="ZOc-3J-Jf8" firstAttribute="top" secondItem="KFl-QP-lOq" secondAttribute="top" constant="118" id="vlX-08-7gt"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="URM-cS-xy1" secondAttribute="width" id="3Ae-i9-UFz"/>
+                            <constraint firstItem="KFl-QP-lOq" firstAttribute="leading" secondItem="aiL-GS-Axu" secondAttribute="leading" id="BST-1P-eLA"/>
+                            <constraint firstItem="KFl-QP-lOq" firstAttribute="top" secondItem="RHz-fe-P7A" secondAttribute="bottom" constant="-20" id="R7k-Sd-mlk"/>
+                            <constraint firstAttribute="trailing" secondItem="Hce-8Z-cSb" secondAttribute="trailing" id="WbS-dr-FAc"/>
+                            <constraint firstItem="Hce-8Z-cSb" firstAttribute="top" secondItem="RHz-fe-P7A" secondAttribute="bottom" constant="-20" id="WnM-WZ-ErV"/>
+                            <constraint firstAttribute="trailing" secondItem="KFl-QP-lOq" secondAttribute="trailing" id="gaO-fX-Oi1"/>
+                            <constraint firstItem="9Rk-JX-Bzd" firstAttribute="top" secondItem="KFl-QP-lOq" secondAttribute="bottom" id="w4i-G2-Am3"/>
+                            <constraint firstItem="Hce-8Z-cSb" firstAttribute="leading" secondItem="aiL-GS-Axu" secondAttribute="leading" id="xaj-Zh-gcs"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="900"/>
+                    <connections>
+                        <outlet property="avatarImage" destination="6BG-Eo-727" id="VpS-hP-uy2"/>
+                        <outlet property="header" destination="Hce-8Z-cSb" id="w57-bK-2w2"/>
+                        <outlet property="headerLabel" destination="MVV-DQ-JEu" id="4Sg-3N-XuN"/>
+                        <outlet property="scrollView" destination="KFl-QP-lOq" id="fsw-hO-Zfl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JxU-jU-cZb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83.200000000000003" y="128.63568215892056"/>
+        </scene>
+        <!--Twitter Table View Controller-->
+        <scene sceneID="afJ-E0-87p">
+            <objects>
+                <viewController id="UAC-zy-Gjj" customClass="TwitterTableViewController" customModule="TB_TwitterHeader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dSw-ny-KLe"/>
+                        <viewControllerLayoutGuide type="bottom" id="gSR-yu-SI5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62v-kP-lBm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIF-vO-FYm" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaafar Barek" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMa-ub-5fz">
+                                        <rect key="frame" x="138" y="104" width="99.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="SMa-ub-5fz" secondAttribute="centerX" id="C9q-tl-IY4"/>
+                                    <constraint firstItem="SMa-ub-5fz" firstAttribute="top" secondItem="VIF-vO-FYm" secondAttribute="top" constant="104" id="cCl-or-Mtm"/>
+                                    <constraint firstAttribute="height" constant="107" id="xsI-YX-qTP"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fn1-sJ-KCS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="qmJ-ub-ctK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCE-9O-SZk" userLabel="FollowButton" customClass="TWTButton" customModule="TB_TwitterHeader" customModuleProvider="target">
+                                            <rect key="frame" x="255" y="118" width="112" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="UVQ-Oj-FFU"/>
+                                                <constraint firstAttribute="width" constant="112" id="wKV-6K-86C"/>
+                                            </constraints>
+                                            <state key="normal" title="Follow">
+                                                <color key="titleColor" red="0.33333333329999998" green="0.67450980390000004" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="followNuttonTapped" destination="UAC-zy-Gjj" eventType="touchUpInside" id="t3a-l9-RKl"/>
+                                                <action selector="shamelessActionThatBringsYouToMyTwitterProfile" destination="oMC-sT-IFX" eventType="touchUpInside" id="aaY-T1-c3Y"/>
+                                            </connections>
+                                        </button>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="wpn-iJ-Tjz" userLabel="AvatarImage" customClass="AvatarImageView" customModule="TB_TwitterHeader" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="69" width="69" height="69"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jaafar Barek" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vh-G0-QqO">
+                                            <rect key="frame" x="8" y="146" width="224" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" red="0.16078431369999999" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@BarekJaafar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZg-3Z-2qv" userLabel="TwitterUsername">
+                                            <rect key="frame" x="8" y="176" width="128" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.40000000000000002" green="0.41960784309999999" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="RCE-9O-SZk" secondAttribute="trailing" constant="8" id="4Nw-iR-lAa"/>
+                                        <constraint firstItem="RCE-9O-SZk" firstAttribute="top" secondItem="qmJ-ub-ctK" secondAttribute="top" constant="118" id="CCB-df-4Hz"/>
+                                    </constraints>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gSR-yu-SI5" firstAttribute="top" secondItem="fn1-sJ-KCS" secondAttribute="bottom" id="0KN-Cf-EGy"/>
+                            <constraint firstItem="VIF-vO-FYm" firstAttribute="leading" secondItem="62v-kP-lBm" secondAttribute="leading" id="6fM-kP-aPj"/>
+                            <constraint firstAttribute="trailing" secondItem="fn1-sJ-KCS" secondAttribute="trailing" id="931-KC-mv3"/>
+                            <constraint firstItem="VIF-vO-FYm" firstAttribute="top" secondItem="dSw-ny-KLe" secondAttribute="bottom" constant="-20" id="a44-cV-3y5"/>
+                            <constraint firstItem="fn1-sJ-KCS" firstAttribute="top" secondItem="dSw-ny-KLe" secondAttribute="bottom" constant="-20" id="clW-Yv-p4C"/>
+                            <constraint firstAttribute="trailing" secondItem="VIF-vO-FYm" secondAttribute="trailing" id="tz9-sb-a0e"/>
+                            <constraint firstItem="fn1-sJ-KCS" firstAttribute="leading" secondItem="62v-kP-lBm" secondAttribute="leading" id="uXd-RQ-mQb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImage" destination="wpn-iJ-Tjz" id="hc6-Tv-6iY"/>
+                        <outlet property="header" destination="VIF-vO-FYm" id="Bb5-1h-xYM"/>
+                        <outlet property="headerLabel" destination="SMa-ub-5fz" id="uj6-iT-IjH"/>
+                        <outlet property="tableView" destination="fn1-sJ-KCS" id="tsw-Fz-eMh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWE-12-G9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.79999999999995" y="42.728635682158924"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="love" width="32" height="32"/>
+        <image name="profile" width="175" height="175"/>
+    </resources>
+</document>
